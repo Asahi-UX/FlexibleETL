@@ -33,7 +33,9 @@
 
 ### Установка
 git clone https://github.com/Asahi-UX/FlexibleETL.git
+
 cd etl-framework
+
 pip install -r requirements.txt
 
 text
