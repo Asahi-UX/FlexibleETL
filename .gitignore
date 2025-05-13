@@ -1,0 +1,11 @@
+__pycache__/
+.mypy_cache/
+venv/
+logs/
+exports/
+tests/
+.env
+strategies/cloud_saver.py
+backup/
+analyze/
+config/messages.py
