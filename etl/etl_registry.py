@@ -1,4 +1,4 @@
-from etl_postgres import PostgresETL
+from etl.etl_postgres import PostgresETL
 
 """
 Реестр ETL-классов для фабричного создания объектов.

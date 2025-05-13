@@ -1,7 +1,7 @@
 # di_container.py
 from dependency_injector import providers
 from modules.containers import Container  # Импорт из нового модуля
-from etl_postgres import PostgresETL
+from etl.etl_postgres import PostgresETL
 
 
 class ExtendedContainer(Container):

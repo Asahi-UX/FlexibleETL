@@ -1,4 +1,4 @@
-from etl_facade import ETLFacade
+from etl.etl_facade import ETLFacade
 from modules.containers import Container
 """
 Фасад для запуска ETL-процесса с настройкой параметров через ETLFacade.

@@ -1,6 +1,6 @@
 import argparse
 from config.config import get_etl_config
-from etl_registry import ETL_MAP
+from etl.etl_registry import ETL_MAP
 from modules.containers import Container
 from modules.decorators import error_handler
 from config.config import logger

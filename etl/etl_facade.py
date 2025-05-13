@@ -1,7 +1,7 @@
 # etl_facade.py
 
 from config.config import logger
-from etl_registry import ETL_MAP
+from etl.etl_registry import ETL_MAP
 
 
 class ETLFacade:

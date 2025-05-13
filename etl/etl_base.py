@@ -121,7 +121,6 @@ class ETLBase(ABC):
     def _update_metrics(self, rows: int):
         self.metrics['rows_processed'] += rows
         self.metrics['memory_usage'].append(memory_usage(proc=-1, interval=0.5, backend='psutil', max_usage=True))
-        # max(memory_usage(proc=-1, interval=0.5)))
 
     @error_handler(log_message="Ошибка отправки отчета", notify=True)
     def _send_report(self) -> None:
@@ -140,4 +139,3 @@ class ETLBase(ABC):
             body=f"Файл экспорта: {self.filename.name}",
             attachment_path=str(self.filename)
         )
-        # self.logger.info(f"Письмо с вложением {self.filename} отправлено")

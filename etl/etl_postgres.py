@@ -4,7 +4,7 @@ from sqlalchemy import text
 from typing import Iterator
 from config.db_connectors import PostgresConnector
 from modules.decorators import error_handler
-from etl_base import ETLBase
+from etl.etl_base import ETLBase
 from modules.unit_of_work import UnitOfWork
 
 
