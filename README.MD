@@ -38,7 +38,6 @@ cd etl-framework
 
 pip install -r requirements.txt
 
-text
 
 ### Настройка .env
 DB_USER=postgres
@@ -47,7 +46,6 @@ DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=mydb
 
-text
 
 ### Пример через CLI
 python cli.py
@@ -57,7 +55,6 @@ python cli.py
 --compression gzip
 --send-email
 
-text
 
 ### Пример через Python API
 from etl.etl_facade import ETLFacade
@@ -70,7 +67,6 @@ compression='snappy'
 )
 facade.run_etl()
 
-text
 
 ## 🧩 Архитектура модулей
 
