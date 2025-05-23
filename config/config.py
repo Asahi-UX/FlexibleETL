@@ -17,6 +17,42 @@ import os
 from pathlib import Path
 from functools import lru_cache
 from dotenv import load_dotenv
+# from dependency_injector import providers
+from typing import Optional
+
+
+class DatabaseConfig:
+    def __init__(self, db_type: str,
+                 user: Optional[str],
+                 password: Optional[str],
+                 host: Optional[str],
+                 port: Optional[int],
+                 dbname: Optional[str]):
+        self.db_type = db_type
+        self.user = user
+        self.password = password
+        self.host = host
+        self.port = port
+        self.dbname = dbname
+
+
+def load_db_config() -> DatabaseConfig:
+    print("ENV VARS:")
+    user = os.getenv("DB_USER")
+    password = os.getenv("DB_PASSWORD")
+    host = os.getenv("DB_HOST")
+    dbname = os.getenv("DB_NAME")
+    if not all([user, password, host, dbname]):
+        raise EnvironmentError("DB_USER, DB_PASSWORD, DB_HOST, DB_NAME must be set")
+
+    return DatabaseConfig(
+        db_type=os.getenv("DB_TYPE", "postgres"),
+        user=user,
+        password=password,
+        host=host,
+        port=int(os.getenv("DB_PORT", 5432)),
+        dbname=dbname
+    )
 
 
 load_dotenv(override=True)
