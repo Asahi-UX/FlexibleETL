@@ -10,3 +10,4 @@ backup/
 analyze/
 config/messages.py
 expo/
+sql/
